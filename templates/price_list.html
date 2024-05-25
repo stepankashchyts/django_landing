@@ -1,0 +1,43 @@
+<!-- Карточки -->
+<section>
+     <div class="container">
+        <h1 class="text-3">COURSE PACKS:</h1>
+        <div class="row justify-content-center">
+            
+          {%for x in price_card%}
+          <div class="card product_card" style="width: 18rem; background-color: #c0c0c0;">
+            <div class="card-body">
+              <h5 class="card-title">{{x.pc_title}}</h5>
+              <p class="card-text">{{x.pc_description}}</p>
+              <h3 class="card-price">{{x.pc_value}}</h3>
+            </div>
+          </div>
+          {%endfor%}
+          
+        </div>	
+    </div>
+</section>
+<!-- Таблица -->
+<section>
+    <div class="container">
+        <h1 class="text-3">Prices</h1>
+        <table class="table table_one">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Service</th>
+            <th scope="col">Old Price</th>
+            <th scope="col">New</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for str in price_table%}
+          <tr>
+            <td>{{str.pt_title}}</td>
+            <td><del>{{str.pt_old_price}}</del></td>
+            <td>{{str.pt_new_price}}</td>
+          </tr>
+         {%endfor%}
+        </tbody>
+      </table>
+    </div>
+</section>

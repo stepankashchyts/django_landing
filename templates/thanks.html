@@ -1,0 +1,16 @@
+{% extends 'base.html'%}
+{%load static%}
+
+{%block thanks%}
+<section>
+	{% if name is not None %}
+	<div class='container'>
+		<CENTER> <h1>THANK YOU {{name}}!</h1> </CENTER>
+	</div>
+	{% else %}
+	<div class='container'>
+		<CENTER> <h1>THANK YOU.</h1> </CENTER>
+	</div>
+	{% endif %}
+</section>
+{%endblock%}
